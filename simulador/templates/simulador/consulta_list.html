@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+
+
+
+{%block content%}
+<section >
+    <div>
+        <h2>Listado de Consultas</h2>
+    </div>
+</section>
+<section>
+   <div >
+       
+    {% if consulta_list %}
+    <ul>
+
+        {% for consulta in consulta_list %}
+        <li>
+            <a href="{{ consulta.get_absolute_url }}">{{consulta.nombre}}</a>({{ consulta.mensaje }})
+        </li>
+        {%endfor%}
+
+    </ul>
+    {%else%}
+    <p>
+        No hay consultas en la base de datos...
+    </p>
+    {%endif%}
+   </div>
+</section>
+
+{%endblock%}

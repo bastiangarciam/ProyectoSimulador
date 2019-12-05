@@ -1,0 +1,14 @@
+Integrantes: 	Bastian Garcia
+		Matías Gómez
+		Alejandro Martinez
+
+usuario: matias
+contraseña: matias
+
+URLS:
+
+simulador/consulta/create             Crear
+simulador/consulta/<int:pk>/update	Actualizar
+simulador/consulta/<int:pk>/delete	Eliminar
+
+

@@ -1,0 +1,44 @@
+{% extends "base_generic.html" %}
+
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/estilos.css">
+
+
+
+
+<!--Scripts-->
+<script>src = "/static/js/main.js"</script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+{% block content %}
+
+
+
+<!--Carrusel-->
+<div id="c-slider">
+
+	<div id="slider">
+		<section><img src="/static/img/1.jpg" alt=""></section>
+		<section><img src="/static/img/2.jpg" alt=""></section>
+		<section><img src="/static/img/3.jpg" alt=""></section>
+		<section><img src="/static/img/4.jpg" alt=""></section>
+
+	</div>
+	<div id="btn-prev">&#60;</div>
+	<div id="btn-next">&#62;</div>
+</div>
+<script src="/static/js/slider.js"></script>
+<br>
+<br>
+<!-- Agregar estoy-->
+
+
+<br><br>
+<p class="subtitulo">¿Quieres practicar para lograr obtener tu licencia? </p>
+<br><br><br>
+
+
+{% endblock %}

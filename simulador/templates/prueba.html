@@ -1,0 +1,1735 @@
+{% extends "base_generic.html" %}
+
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/estilos.css">
+
+
+
+
+<!--Scripts-->
+<script>src = "/static/js/main.js"</script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+{% block content %}
+
+<h1 class="cronometro">
+
+	<span id="minutos">00</span>:<span id="segundos">0</span>
+
+</h1>
+
+<fieldset class="centrarCuadro">
+	<br>
+	<div>
+		<span class="tmno">
+			1-
+		</span>
+
+
+
+		<b class="textPregunta" id="22">
+			¿Por qué no es bueno desenganchar el motor del vehículo al ir circulando?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun1">
+				<input class="RbAjustar" type="radio" name="rad1" id="pregunta1" value="a">
+				<b>a)</b>
+				Porque ello hace que el vehículo resbale.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad1" id="preg1-2" value="b">
+			<b>b)</b>
+			Porque el motor se detendrá.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad1" id="preg1-3" value="c">
+			<b>c)</b>
+			Porque no hay frenado del motor.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad1" id="preg1-4" value="d">
+			<b>d)</b>
+			Porque el motor funcionará más rápido.
+		</p>
+		</form>
+
+	</div>
+
+
+
+	<br><br>
+
+
+	<div>
+		<span class="tmno">
+			2-
+		</span>
+
+
+
+		<b class="textPregunta">
+			En un pavimento mojado, ¿influye el estado de los neumáticos en la distancia de frenado de su vehículo?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun2">
+				<input class="RbAjustar" type="radio" name="rad2" value="a">
+				<b>a)</b>
+				No, la distancia de frenado depende sólo de la velocidad.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad2" value="b">
+			<b>b)</b>
+			No, porque una vez que se acciona el freno la distancia de frenado es siempre la misma para cada vehículo.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad2" value="c">
+			<b>c)</b>
+			Sí, a mayor desgaste de los neumáticos menor es dicha distancia.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad2" value="d">
+			<b>d)</b>
+			Sí, porque el mayor o menor desgaste de los neumáticos, entre otros factores, determinará que dicha
+			distancia sea mayor o menor.
+		</p>
+		</form>
+
+	</div>
+
+	<br><br>
+
+	<div>
+		<span class="tmno">
+			3-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Frente a una situación normal, ¿cuál es la forma más segura de frenar?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun3">
+				<input class="RbAjustar" type="radio" name="rad3" value="a">
+				<b>a)</b>
+				Frenando fuerte, poniendo la palanca de cambio en neutro y tirando el freno de mano justo antes de
+				detenerse.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad3" value="b">
+			<b>b)</b>
+			Frenando suavemente, presionando el pedal de embrague y tirando el freno de mano justo antes de detenerse.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad3" value="c">
+			<b>c)</b>
+			Poniendo la palanca de cambio en neutro, frenando fuerte y luego soltando el freno justo antes de detenerse.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad3" value="d">
+			<b>d)</b>
+			Frenando suavemente, luego un poco más fuerte cuando comienza a detenerse y después aflojando de a poco el
+			freno antes de detenerse.
+		</p>
+
+		</form>
+	</div>
+	<br><br>
+
+	<div>
+
+
+		<span class="tmno">
+			4-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cuándo usaría usted las luces intermitentes de advertencia de peligro?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun4">
+				<input class="RbAjustar" type="radio" name="rad4" value="a">
+				<b>a)</b>
+				Cuando esté en pana obstruyendo el tránsito.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad4" value="b">
+			<b>b)</b>
+			Cuando se estacione en doble fila respecto a otro vehículo estacionado junto a la cuneta.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad4" value="c">
+			<b>c)</b>
+			Cuando estacione junto a una cuneta en la que hay línea amarilla pintada.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad4" value="d">
+			<b>d)</b>
+			Cuando sus señalizadores de viraje no estén funcionando.
+		</p>
+
+		</form>
+	</div>
+	<br><br>
+
+	<div>
+
+
+		<span class="tmno">
+			5-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Por qué los neumáticos deben mantenerse a la presión indicada por el fabricante?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun5">
+				<input class="RbAjustar" type="radio" name="rad5" value="a">
+				<b>a)</b>
+				Para que el vehículo se mantenga a la altura correcta sobre la vía.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad5" value="b">
+			<b>b)</b>
+			Para no desgastar el motor.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad5" value="c">
+			<b>c)</b>
+			Para ayudar a evitar que el automóvil se roncee.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad5" value="d">
+			<b>d)</b>
+			Para evitar que el automóvil se incline hacia un lado.
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+
+	<div>
+
+
+		<span class="tmno">
+			6-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Su vehículo se desvía hacia un lado cuando usted frena. Usted debería:
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun6">
+				<input class="RbAjustar" type="radio" name="rad6" value="a">
+				<b>a)</b>
+				Cambiar los neumáticos de un lado hacia el otro y viceversa.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad6" value="b">
+			<b>b)</b>
+			Bombear el pedal al frenar.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad6" value="c">
+			<b>c)</b>
+			Usar su freno de mano.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad6" value="d">
+			<b>d)</b>
+			Consultar con su mecánico lo antes posible.
+		</p>
+		</form>
+
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			7-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Qué distancia de detención tiene un tren que circula a alrededor de 100 km/h?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun7">
+				<input class="RbAjustar" type="radio" name="rad7" value="a">
+				<b>a)</b>
+				Aproximadamente 100 metros.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad7" value="b">
+			<b>b)</b>
+			Aproximadamente 200 metros
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad7" value="c">
+			<b>c)</b>
+			Entre 800 y 1000 metros.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad7" value="d">
+			<b>d)</b>
+			Más de 2000 metros.
+		</p>
+		</form>
+
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			8-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Usted se aproxima a una curva hacia la izquierda. ¿Qué debería hacer?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun8">
+				<input class="RbAjustar" type="radio" name="rad8" value="a">
+				<b>a)</b>
+				Mantenerse bien a la derecha ya que así tardará menos en pasar la curva.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad8" value="b">
+			<b>b)</b>
+			Mantenerse bien a la derecha para tener una mejor visual sobre la curva.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad8" value="c">
+			<b>c)</b>
+			Mantenerse bien a la izquierda para evitar cualquier obstáculo que pueda haber en la cuneta.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad8" value="d">
+			<b>d)</b>
+			Mantenerse bien a la izquierda para hacer la curva menos pronunciada.
+		</p>
+		</form>
+
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			9-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿En qué situación puede usted hacer uso de la bocina de su vehículo?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun9">
+				<input class="RbAjustar" type="radio" name="rad9" value="a">
+				<b>a)</b>
+				Cuando cede a otro el derecho a vía.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad9" value="b">
+			<b>b)</b>
+			Cuando saluda a otros usuarios de la vía.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad9" value="c">
+			<b>c)</b>
+			Cuando trata de prevenir a otros acerca de un peligro.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad9" value="d">
+			<b>d)</b>
+			Cuando desea manifestar su disgusto.
+		</p>
+
+		</form>
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			10-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿En qué circunstancia usted se detendría justo sobre un cruce cebra existente a mitad de cuadra?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun10">
+				<input class="RbAjustar" type="radio" name="rad10" value="a">
+				<b>a)</b>
+				En ningún momento.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad10" value="b">
+			<b>b)</b>
+			Cuando no hay peatones esperando para cruzar.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad10" value="c">
+			<b>c)</b>
+			Durante la noche.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad10" value="d">
+			<b>d)</b>
+			Cuando ello sea necesario para evitar un accidente.
+
+		</p>
+		</form>
+
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			11-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Un vehículo emerge sorpresivamente desde una vía lateral situándose delante suyo y obligándolo a frenar
+			fuertemente. ¿Qué hace usted?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun11">
+				<input class="RbAjustar" type="radio" name="rad11" value="a">
+				<b>a)</b>
+				Enciende y apaga sus luces para manifestarle su enojo.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad11" value="b">
+			<b>b)</b>
+			Ignora el error y permanece calmado.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad11" value="c">
+			<b>c)</b>
+			Toca la bocina para demostrar su enojo.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad11" value="d">
+			<b>d)</b>
+			Lo adelanta dejándolo atrás lo antes posible.
+
+		</p>
+		</form>
+
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			12-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cómo debería usted adelantar a personas que van a caballo?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun12">
+				<input class="RbAjustar" type="radio" name="rad12" value="a">
+				<b>a)</b>
+				Conduciendo lentamente y dejando bastante espacio lateral.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad12" value="b">
+			<b>b)</b>
+			Pasando cerca de ellas y adelantándolas lo antes posible.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad12" value="c">
+			<b>c)</b>
+			La velocidad no es importante, pero sí el dejar suficiente espacio lateral.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad12" value="d">
+			<b>d)</b>
+			Tocando la bocina sólo una vez como señal de advertencia.
+
+		</p>
+
+		</form>
+	</div>
+	<br><br>
+
+	<div>
+
+
+		<span class="tmno">
+			13-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Viajando de noche usted es encandilado por las luces de un vehículo que viene en sentido contrario, ¿qué
+			debería hacer usted?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun13">
+				<input class="RbAjustar" type="radio" name="rad13" value="a">
+				<b>a)</b>
+				Bajar su visor de protección solar.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad13" value="b">
+			<b>b)</b>
+			Poner luces delanteras altas.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad13" value="c">
+			<b>c)</b>
+			Poner su mano sobre sus ojos.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad13" value="d">
+			<b>d)</b>
+			Bajar la velocidad y eventualmente detenerse.
+
+		</p>
+
+		</form>
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			14-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cómo puede usted evitar que los neumáticos patinen cuando la calzada está con hielo?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun14">
+				<input class="RbAjustar" type="radio" name="rad14" value="a">
+				<b>a)</b>
+				Manteniéndose siempre en primera.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad14" value="b">
+			<b>b)</b>
+			Poniendo el freno de mano si las ruedas comienzan a patinar.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad14" value="c">
+			<b>c)</b>
+			Conduciendo lentamente en la marcha más alta posible.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad14" value="d">
+			<b>d)</b>
+			Conduciendo en neutro.
+
+		</p>
+
+		</form>
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			15-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cuándo es su distancia de detención total mucho más larga?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun15">
+				<input class="RbAjustar" type="radio" name="rad15" value="a">
+				<b>a)</b>
+				Cuando hay neblina.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad15" value="b">
+			<b>b)</b>
+			Cuando es de noche
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad15" value="c">
+			<b>c)</b>
+			Cuando está lloviendo.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad15" value="d">
+			<b>d)</b>
+			Cuando hay vientos fuertes.
+
+		</p>
+
+		</form>
+	</div>
+
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			16-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cómo puede usted controlar mejor su vehículo al conducir con nieve?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun16">
+				<input class="RbAjustar" type="radio" name="rad16" value="a">
+				<b>a)</b>
+				Conduciendo en un cambio bajo y sujetando el volante muy firmemente.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad16" value="b">
+			<b>b)</b>
+			Conduciendo en primera.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad16" value="c">
+			<b>c)</b>
+			Manteniendo el motor acelerado y presionando el pedal de embrague.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad16" value="d">
+			<b>d)</b>
+			Conduciendo lentamente en el cambio más alto posible.
+
+		</p>
+		</form>
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			17-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Qué significa un semáforo en rojo?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun17">
+				<input class="RbAjustar" type="radio" name="rad17" value="a">
+				<b>a)</b>
+				Que usted puede seguir su camino si no vienen vehículos por la otra vía.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad17" value="b">
+			<b>b)</b>
+			Que usted debe disminuir su velocidad y estar preparado para detenerse.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad17" value="c">
+			<b>c)</b>
+			Que usted debe detenerse antes de la línea de detención de vehículos.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad17" value="d">
+			<b>d)</b>
+			Que usted debe detenerse sobre el paso de peatones.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			18-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Usted está enfrentando un semáforo en amarillo. ¿Qué luces se encenderán después?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun18">
+				<input class="RbAjustar" type="radio" name="rad18" value="a">
+				<b>a)</b>
+				Primero la roja y luego la amarilla nuevamente.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad18" value="b">
+			<b>b)</b>
+			Primero la roja y luego la verde.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad18" value="c">
+			<b>c)</b>
+			Primero la verde y luego la roja.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad18" value="d">
+			<b>d)</b>
+			Primero la verde y luego la amarilla nuevamente.
+
+		</p>
+
+		</form>
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			19-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Usted llega al lugar de un accidente en el que ha participado un motociclista. El motociclista yace
+			consciente, pero en estado de shock. ¿De qué debería asegurarse usted?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun19">
+				<input class="RbAjustar" type="radio" name="rad19" value="a">
+				<b>a)</b>
+				Que el motociclista se saque el casco.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad19" value="b">
+			<b>b)</b>
+			Que el motociclista no se saque el casco.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad19" value="c">
+			<b>c)</b>
+			Que al motociclista se le ayude a ponerse de pie.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad19" value="d">
+			<b>d)</b>
+			Que al motociclista se le dé algo para beber
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			20-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Su vehículo se desvía hacia un lado cuando usted frena. ¿Cuál es la falla más probable?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun20">
+				<input class="RbAjustar" type="radio" name="rad20" value="a">
+				<b>a)</b>
+				Un bajo nivel del líquido de frenos.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad20" value="b">
+			<b>b)</b>
+			Su freno de mano está todavía puesto.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad20" value="c">
+			<b>c)</b>
+			Frenos mal ajustados.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad20" value="d">
+			<b>d)</b>
+			Neumáticos con presión de aire inadecuada.
+
+		</p>
+		</form>
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			21-
+		</span>
+
+
+
+		<b class="textPregunta">
+			La presión de los neumáticos debe revisarse:?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun21">
+				<input class="RbAjustar" type="radio" name="rad21" value="a">
+				<b>a)</b>
+				Cuando los neumáticos están fríos.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad21" value="b">
+			<b>b)</b>
+			Cuando los neumáticos están calientes.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad21" value="c">
+			<b>c)</b>
+			En cualquier momento, porque da igual que los neumáticos estén fríos o calientes.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad21" value="d">
+			<b>d)</b>
+			Cuando Se revienta un neumatico
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			22-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Uno de sus neumáticos traseros se revienta mientras usted conduce. ¿Cuáles 2 cosas debe hacer usted?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun22">
+				<input class="RbAjustar" type="radio" name="rad22" value="a">
+				<b>a)</b>
+				Poner marcha atrás para detener el vehículo.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad22" value="b">
+			<b>b)</b>
+			Hacer una señal de detención con el brazo y disminuir la velocidad.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad22" value="c">
+			<b>c)</b>
+			Detenerse lentamente al costado de la vía.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad22" value="d">
+			<b>d)</b>
+			Detener el vehículo frenando lo más fuerte que pueda.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			23-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cuál de las siguientes afirmaciones es verdadera?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun23">
+				<input class="RbAjustar" type="radio" name="rad23" value="a">
+				<b>a)</b>
+				El cinturón de seguridad disminuye las posibilidades de sufrir lesiones en un accidente.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad23" value="b">
+			<b>b)</b>
+			Los air-bags (o bolsas de aire) reemplazan ventajosamente al cinturón de seguridad.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad23" value="c">
+			<b>c)</b>
+			Para quienes viajan en el asiento trasero de un automóvil el cinturón de seguridad no les presta utilidad.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad23" value="d">
+			<b>d)</b>
+			Usar cinturón de seguridad es más necesario cuando se conduce en carreteras.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			24-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cuál de las siguientes afirmaciones es falsa cuando usted aumenta su velocidad de 30 km/h a 60 km/h?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun24">
+				<input class="RbAjustar" type="radio" name="rad24" value="a">
+				<b>a)</b>
+				Se duplica la energía cinética.
+
+		</p>
+
+		<p>
+
+			<input class="RbAjustar" type="radio" name="rad24" value="b">
+			<b>b)</b>
+			Se cuadruplica la energía cinética.
+		</p>
+
+		<p>
+
+			<input class="RbAjustar" type="radio" name="rad24" value="c">
+			<b>c)</b>
+			Se duplica la distancia de reacción.
+		</p>
+
+
+		<p>
+
+			<input class="RbAjustar" type="radio" name="rad24" value="d">
+			<b>d)</b>
+			Se cuadruplica la distancia de frenado.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			25-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Usted va circulando a 50 km/h a lo largo de un camino plano y de asfalto. Las condiciones climáticas son
+			buenas. Sus neumáticos y frenos también están buenos. En estas circunstancias, detenerse le tomará
+			aproximadamente …
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun25">
+				<input class="RbAjustar" type="radio" name="rad25" value="a">
+				<b>a)</b>
+				Unos 50 metros
+
+		</p>
+
+		<p>
+
+			<input class="RbAjustar" type="radio" name="rad25" value="b">
+			<b>b)</b>
+			Unos 15 metros
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad25" value="c">
+			<b>c)</b>
+			Unos 10 metros
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad25" value="d">
+			<b>d)</b>
+			Unos 30 metros
+
+		</p>
+
+		</form>
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			26-
+		</span>
+
+
+
+		<b class="textPregunta">
+			En cuanto a la concentración de alcohol en la sangre de una persona que ingiere la misma cantidad en
+			ocasiones diferentes, ¿cuál de las siguientes afirmaciones es falsa?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun26">
+				<input class="RbAjustar" type="radio" name="rad26" value="a">
+				<b>a)</b>
+				Aunque la persona beba la misma cantidad de alcohol cada ocasión, la concentración de éste en su sangre
+				puede ser diferente.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad26" value="b">
+			<b>b)</b>
+			La concentración de alcohol depende de cuánto se come en cada ocasión.
+		</p>
+
+		<p>
+
+			<input class="RbAjustar" type="radio" name="rad26" value="c">
+			<b>c)</b>
+			Entre otros factores, la concentración de alcohol también depende del tiempo que dura la ingestión cada vez.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad26" value="d">
+			<b>d)</b>
+			Si la cantidad de alcohol ingerida en cada ocasión es exactamente la misma, la concentración de alcohol en
+			la sangre también será la misma.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			27-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Usted está tomando unos remedios que probablemente afectarán su conducción. ¿Qué debería hacer?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun27">
+				<input class="RbAjustar" type="radio" name="rad27" value="a">
+				<b>a)</b>
+				Limitar su conducción sólo a viajes esenciales.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad27" value="b">
+			<b>b)</b>
+			Conducir solamente acompañado por alguien que posea una licencia de conducir.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad27" value="c">
+			<b>c)</b>
+			Conducir sólo distancias cortas.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad27" value="d">
+			<b>d)</b>
+			Solicitar consejo médico antes de conducir.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			28-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cómo afecta el consumo de alcohol a su conducción?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun28">
+				<input class="RbAjustar" type="radio" name="rad28" value="a">
+				<b>a)</b>
+				Acelera sus reacciones.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad28" value="b">
+			<b>b)</b>
+			Aumenta su lucidez.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad28" value="c">
+			<b>c)</b>
+			Mejora su coordinación.
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad28" value="d">
+			<b>d)</b>
+			Reduce su concentración.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			29-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Su vehículo se desvía hacia un lado cuando usted frena. Usted debería:
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun29">
+				<input class="RbAjustar" type="radio" name="rad29" value="a">
+				<b>a)</b>
+				Cambiar los neumáticos de un lado hacia el otro y viceversa.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad29" value="b">
+			<b>b)</b>
+			Bombear el pedal al frenar.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad29" value="c">
+			<b>c)</b>
+			Usar su freno de mano.
+
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad29" value="d">
+			<b>d)</b>
+			Consultar con su mecánico lo antes posible.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			30-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cuál de estos líquidos, en el caso de estar en un nivel bajo, podría causar un accidente?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun30">
+				<input class="RbAjustar" type="radio" name="rad30" value="a">
+				<b>a)</b>
+				El líquido de freno.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad30" value="b">
+			<b>b)</b>
+			El anticongelante.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad30" value="c">
+			<b>c)</b>
+			El agua de la batería.
+
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad30" value="d">
+			<b>d)</b>
+			El líquido refrigerante.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			31-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Frente a una situación normal, ¿cuál es la forma más segura de frenar?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun31">
+				<input class="RbAjustar" type="radio" name="rad31" value="a">
+				<b>a)</b>
+				Frenando fuerte, poniendo la palanca de cambio en neutro y tirando el freno de mano justo antes de
+				detenerse.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad31" value="b">
+			<b>b)</b>
+			Frenando suavemente, presionando el pedal de embrague y tirando el freno de mano justo antes de detenerse.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad31" value="c">
+			<b>c)</b>
+			Poniendo la palanca de cambio en neutro, frenando fuerte y luego soltando el freno justo antes de detenerse.
+
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad31" value="d">
+			<b>d)</b>
+			Frenando suavemente, luego un poco más fuerte cuando comienza a detenerse y después aflojando de a poco el
+			freno antes de
+			detenerse.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			32-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿Cuándo usaría usted las luces intermitentes de advertencia de peligro?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun32">
+				<input class="RbAjustar" type="radio" name="rad32" value="a">
+				<b>a)</b>
+				Cuando esté en pana obstruyendo el tránsito.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad32" value="b">
+			<b>b)</b>
+			Cuando se estacione en doble fila respecto a otro vehículo estacionado junto a la cuneta.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad32" value="c">
+			<b>c)</b>
+			Cuando estacione junto a una cuneta en la que hay línea amarilla pintada.
+
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad32" value="d">
+			<b>d)</b>
+			Cuando sus señalizadores de viraje no estén funcionando.
+
+		</p>
+
+		</form>
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			33-
+		</span>
+
+
+
+		<b class="textPregunta">
+			¿A qué se debe un alto consumo de combustible?
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun33">
+				<input class="RbAjustar" type="radio" name="rad33" value="a">
+				<b>a)</b>
+				Fallas en el sistema de dirección.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad33" value="b">
+			<b>b)</b>
+			Aceleraciones en curvas.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad33" value="c">
+			<b>c)</b>
+			Frecuentes frenadas y aceleraciones.
+
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad33" value="d">
+			<b>d)</b>
+			Conducción en marchas altas.
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			34-
+		</span>
+
+
+
+		<b class="textPregunta">
+			La profundidad de los surcos de los neumáticos de un automóvil no debería ser inferior a ...
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun34">
+				<input class="RbAjustar" type="radio" name="rad34" value="a">
+				<b>a)</b>
+				5.0 mm
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad34" value="b">
+			<b>b)</b>
+			4.0 mm
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad34" value="c">
+			<b>c)</b>
+			1.6 mm
+
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad34" value="d">
+			<b>d)</b>
+			1.0 mm
+
+		</p>
+		</form>
+
+	</div>
+	<br><br>
+	<div>
+
+
+		<span class="tmno">
+			35-
+		</span>
+
+
+
+		<b class="textPregunta">
+			Desenganchar el motor del vehículo...
+		</b>
+		<p class="ad">
+			Marque una respuesta
+		</p>
+
+
+		<p>
+			<form method="POST" name="pregun35">
+				<input class="RbAjustar" type="radio" name="rad35" value="a">
+				<b>a)</b>
+				permite un mejor control al conductor.
+
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad35" value="b">
+			<b>b)</b>
+			hace más fácil las maniobras.
+		</p>
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad35" value="c">
+			<b>c)</b>
+			aumenta el consumo de combustible.
+
+		</p>
+
+
+		<p>
+			<input class="RbAjustar" type="radio" name="rad35" value="d">
+			<b>d)</b>
+			reduce el control del conductor.
+
+
+		</p>
+
+		</form>
+	</div>
+	<br><br>
+
+
+
+
+	<div id="caja1" class="centrarBoton">
+
+
+		<input class="validar" type="button" id="botonEnviar" onmouseover="Validar2()" onclick="Calcular()"
+			value="Ver Resultados">
+		<br>
+	</div>
+
+</fieldset>
+
+<br>
+{% endblock %}
